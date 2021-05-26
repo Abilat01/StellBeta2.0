@@ -44,6 +44,13 @@ class ExercisesTableView: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let detailVC = segue.destination as! ExerciseDetailVC
+                detailVC.exercisesTitle = exercisesNameArray[indexPath.row]
+                //detailVC.exerciseDetail = Создать неизменяемый массив с описанием
+            }
+        }
         
     }
     

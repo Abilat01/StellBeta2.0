@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="583" y="1478"/>
         </scene>
-        <!--View Controller-->
+        <!--Exercise DetailVC-->
         <scene sceneID="42l-M9-Z0h">
             <objects>
-                <viewController id="rnt-AW-CR0" sceneMemberID="viewController">
+                <viewController id="rnt-AW-CR0" customClass="ExerciseDetailVC" customModule="StellBeta2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqd-OC-Cxc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +94,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gSK-eK-fAo"/>
+                    <connections>
+                        <outlet property="descriptionDetail" destination="jrf-BR-YWG" id="ojN-ls-LIB"/>
+                        <outlet property="exerciseDetail" destination="UjG-Mm-bw6" id="c26-kV-roB"/>
+                        <outlet property="imageDetail" destination="FWQ-o7-ReU" id="uH8-ib-5fH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="691-7m-EeO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +165,7 @@
                                 <connections>
                                     <outlet property="exercisesImege" destination="daZ-Lb-YPf" id="FkL-PN-YlW"/>
                                     <outlet property="exercisesNameLabel" destination="0y9-ov-Anf" id="zMA-lj-Wfp"/>
-                                    <segue destination="rnt-AW-CR0" kind="show" id="7Dv-Jh-pGS"/>
+                                    <segue destination="rnt-AW-CR0" kind="show" identifier="ShowDetail" id="7Dv-Jh-pGS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
