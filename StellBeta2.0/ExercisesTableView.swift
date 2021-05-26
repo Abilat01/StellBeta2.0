@@ -22,13 +22,18 @@ class ExercisesTableView: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return exercisesNameArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath) as! ExercisesCell
-
+        
+        cell.exercisesImege.image = UIImage(named: exercisesNameArray[indexPath.row])
+        
+        cell.exercisesNameLabel.text = exercisesNameArray[indexPath.row]
+        cell.exercisesImege.layer.cornerRadius = cell.exercisesImege.frame.size.height / 2
+        
         
 
         return cell
